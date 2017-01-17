@@ -4,21 +4,21 @@ NavigatorFX is a simple and easy to use slide menu made in JavaFX. It allows you
 
 Example:
   
-  
-> List< NavigatorOption > options = new ArrayList< NavigatorOption >();
->	NavigatorOption optionHome = new NavigatorOption("Home", new ImageView(...));
-> optionHome.setOnMouseClicked(new EventHandler<MouseEvent>() { 
+```java  
+List< NavigatorOption > options = new ArrayList< NavigatorOption >();
+NavigatorOption optionHome = new NavigatorOption("Home", new ImageView(...));
 
->			public void handle(MouseEvent event) {
->				System.out.println("At home section!");
->			};      
+optionHome.setOnMouseClicked(new EventHandler<MouseEvent>() { 
+	@Override
+	public void handle(MouseEvent event) {
+		System.out.println("At home section!");
+  	};      
+});
 
->  });
+NavigatorOption money = new NavigatorOption("Economy", new ImageView(...));
+NavigatorOption sports = new NavigatorOption("Sports", new ImageView(...));
 
->	NavigatorOption money = new NavigatorOption("Economy", new ImageView(...));
+options.addAll(Arrays.asList(optionHome, money, sports));
 
->	NavigatorOption sports = new NavigatorOption("Sports", new ImageView(...));
-
-> options.addAll(Arrays.asList(optionHome, money, sports));
-
-> Navigator navigator = new Navigator(NavigatorPosition.LEFT, options);
+Navigator navigator = new Navigator(NavigatorPosition.LEFT, options);
+``` 
