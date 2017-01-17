@@ -1,0 +1,31 @@
+.navigator-panel {
+	-fx-background-color: transparent;
+	-fx-padding: 0px;
+}
+
+.navigator-panel .navigator-option {
+	-fx-min-height: 5em;
+	-fx-padding: 0 0 0 20;
+}
+
+.navigator-panel .navigator-option:selected {
+	-fx-background-color: darkgray;
+}
+
+.navigator-panel .navigator-option:selected .label,
+.navigator-panel .navigator-option:selected .glyph-icon {
+	-fx-text-fill: white;
+	-fx-fill: white;
+}
+
+.navigator-panel .navigator-option .text, 
+.navigator-panel .navigator-option .glyph-icon {
+	-fx-text-fill: white;
+	-fx-font-size: 2em;
+	-fx-font-family: "Noto";
+	-fx-fill: darkgray;
+}
+
+.navigator-shadowed-layer {
+	-fx-background-color: rgba(0, 0, 0, 0.2);
+}
